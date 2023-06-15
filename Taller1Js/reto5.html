@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cálculo de Figuras Geométricas</title>
+  <style>
+    .card {
+      width: 300px;
+      padding: 20px;
+      margin: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .card button {
+      margin-top: 10px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 5px;
+    }
+    .modal-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .modal-input {
+      margin-bottom: 10px;
+    }
+    .modal-button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cálculo de Figuras Geométricas</h1>
+
+  <div class="card">
+    <h2>Círculo</h2>
+    <button onclick="abrirModal('circulo')">Perímetro</button>
+    <button onclick="abrirModal('circulo')">Área</button>
+  </div>
+
+  <div class="card">
+    <h2>Triángulo</h2>
+    <button onclick="abrirModal('triangulo')">Perímetro</button>
+    <button onclick="abrirModal('triangulo')">Área</button>
+  </div>
+
+  <div class="card">
+    <h2>Rectángulo</h2>
+    <button onclick="abrirModal('rectangulo')">Perímetro</button>
+    <button onclick="abrirModal('rectangulo')">Área</button>
+  </div>
+
+  <div class="card">
+    <h2>Cuadrado</h2>
+    <button onclick="abrirModal('cuadrado')">Perímetro</button>
+    <button onclick="abrirModal('cuadrado')">Área</button>
+  </div>
+
+  <!-- Ventana Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-title" id="modal-title"></span>
+      <input type="number" class="modal-input" id="base" placeholder="Base">
+      <input type="number" class="modal-input" id="altura" placeholder="Altura">
+      <input type="number" class="modal-input" id="radio" placeholder="Radio">
+      <input type="number" class="modal-input" id="lado" placeholder="Lado">
+      <button onclick="cerrarModal()" class="modal-button">Cerrar</button>
+      <button id="calcular-btn" class="modal-button">Calcular</button>
+      <div id="resultado"></div>
+    </div>
+  </div>
+
+  <script src="js/reto5.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</body>
+</html>

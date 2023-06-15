@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+<head>
+    <script src="js/reto2.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Reto 2</title>
+</head>
+<body>
+    <h1>Conversor</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">volver</a></li>
+            <li><a href="#" onclick="realizarConversionInput(1, 2)">Celsius a Fahrenheit</a></li>
+            <li><a href="#" onclick="realizarConversionInput(1, 3)">Celsius a Kelvin</a></li>
+            <li><a href="#" onclick="realizarConversionInput(2, 1)">Fahrenheit a Celsius</a></li>
+            <li><a href="#" onclick="realizarConversionInput(2, 3)">Fahrenheit a Kelvin</a></li>
+            <li><a href="#" onclick="realizarConversionInput(3, 1)">Kelvin a Celsius</a></li>
+            <li><a href="#" onclick="realizarConversionInput(3, 2)">Kelvin a Fahrenheit</a></li>
+        </ul>
+    </nav>
+    <div class="input-container">
+        <input type="text" id="temperaturaInput">
+        <button onclick="realizarConversionInput(1, 2)">Convertir</button>
+    </div>
+    <div class="result" id="resultado"></div>
+
+    <script src="js/reto2.js"></script>
+</body>
+</html>

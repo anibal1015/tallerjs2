@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="js/reto1.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #eee;
+    }
+
+    .input-container {
+      margin-bottom: 10px;
+    }
+
+    .input-container input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .input-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  </style>
+  <title>Reto 1</title>
+</head>
+<body>
+  <h1>Palabra Ingresada</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Volver</a></li>
+    </ul>
+  </nav>
+
+  <div class="input-container">
+    <input type="text" id="palabraInput" placeholder="Ingresa una palabra">
+    <button onclick="ejecutarOpcion(1)">Longitud de la palabra</button>
+    <button onclick="ejecutarOpcion(2)">Palabra en mayúsculas</button>
+    <button onclick="ejecutarOpcion(3)">Palabra en minúsculas</button>
+    <button onclick="ejecutarOpcion(4)">Primer carácter de la palabra</button>
+  </div>
+
+  <div class="result" id="resultado"></div>
+</body>
+</html>

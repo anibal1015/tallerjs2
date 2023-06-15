@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/reto3.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cdf.css">
+    <title>Reto 3</title>
+</head>
+<body>
+    <h1>Tipo de triángulo</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">volver</a></li>
+            
+        </ul>
+    </nav>
+
+    <div class="input-container">
+        <label for="lado1">Lado 1:</label>
+        <input type="number" id="lado1">
+    </div>
+
+    <div class="input-container">
+        <label for="lado2">Lado 2:</label>
+        <input type="number" id="lado2">
+    </div>
+
+    <div class="input-container">
+        <label for="lado3">Lado 3:</label>
+        <input type="number" id="lado3">
+    </div>
+
+    <button class="custom-button" onclick="determinarTipoTriangulo()">Determinar tipo</button>
+
+    <div class="result" id="tipoTriangulo"></div>
+</body>
+</html>

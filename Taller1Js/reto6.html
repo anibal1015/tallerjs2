@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro de Usuario</title>
+  <style>
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+    .form-group input[type="checkbox"] {
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .error-message {
+      color: red;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registro de Usuario</h1>
+
+  <form id="registro-form">
+    <div class="form-group">
+      <label for="tipo-documento">Tipo de documento:</label>
+      <select id="tipo-documento" required>
+        <option value="">Seleccionar</option>
+        <option value="CC">Cédula de Ciudadanía</option>
+        <option value="TI">Tarjeta de Identidad</option>
+        <option value="CE">Cédula de Extranjería</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="no-documento">No. Documento:</label>
+      <input type="text" id="no-documento" required pattern="[0-9]{5,}">
+      <span class="error-message">Ingrese un número de documento válido (mínimo 5 caracteres).</span>
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required pattern="[A-Za-z0-9\s]+">
+      <span class="error-message">Ingrese un nombre válido (solo caracteres alfanuméricos).</span>
+    </div>
+
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" required pattern="[A-Za-z0-9\s]+">
+      <span class="error-message">Ingrese un apellido válido (solo caracteres alfanuméricos).</span>
+    </div>
+
+    <div class="form-group">
+      <label for="fecha-nacimiento">Fecha Nacimiento:</label>
+      <input type="date" id="fecha-nacimiento" required>
+      <span class="error-message">Debe ser mayor de 18 años.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="correo">Correo electrónico:</label>
+      <input type="text" id="correo" required pattern="[a-zA-Z0-9._%+-]+@misena.edu.co">
+      <span class="error-message">Ingrese un correo electrónico válido (@misena.edu.co).</span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" required minlength="10" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$">
+      <span class="error-message">Ingrese una contraseña válida (mínimo 10 caracteres, una mayúscula, una minúscula, un número, un carácter especial).</span>
+    </div>
+
+    <div class="form-group">
+      <label for="comprobar-password">Comprobar password:</label>
+      <input type="password" id="comprobar-password" required>
+      <span class="error-message">Las contraseñas no coinciden.</span>
+    </div>
+
+    <div class="form-group">
+      <input type="checkbox" id="aceptar-terminos" required>
+      <label for="aceptar-terminos">Aceptar Términos de uso</label>
+      <button id="ver-terminos-btn">Ver Términos de uso</button>
+    </div>
+
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <!-- Ventana Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <h2>Términos de uso</h2>
+      <p>Aquí van los términos de uso del formulario de registro.</p>
+      <button id="cerrar-modal">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="js/reto6.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</body>
+</html>
